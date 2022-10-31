@@ -1,4 +1,4 @@
-class MixologistsController < ApplicationController
+class Api::V1::MixologistsController < ApplicationController
   before_action :set_mixologist, only: [:show, :update, :destroy]
 
   # GET /mixologists

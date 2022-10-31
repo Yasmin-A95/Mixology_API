@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :mixologists
-  resources :drinks
+
+  namespace :api do
+      namespace :v1 do 
+      resources :mixologists do 
+        resources :drinks
+      end
+    end
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
